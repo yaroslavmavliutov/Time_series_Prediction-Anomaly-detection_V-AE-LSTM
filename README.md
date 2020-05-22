@@ -24,7 +24,7 @@ from models import V_AE_LSTM
 input_shape = (X_train.shape[1], X_train.shape[2],)
 intermediate_cfg = [64, 'latent', 64]
 latent_dim = 10
-model = V_AE_LSTM(input_shape, intermediate_cfg, latent_dim, 'VAE-LSTM')
+model = V_AE_LSTM(input_shape, intermediate_cfg, latent_dim, 'VAE-LSTM') # or 'AE-LSTM'
 model.fit(X_train, y_train, epochs=2, batch_size=124, validation_split=None, verbose=1)
 ```
 
